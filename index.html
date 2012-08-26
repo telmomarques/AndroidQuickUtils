@@ -42,7 +42,24 @@ Intended to help you getting your Android applications off the ground quickly, b
 
 <h2>Changelog</h2>
 
-<h3>0.2 <sub><sup><code>2012/08/02</code></sup></sub>
+<h3>0.3 <sub><sup><code>2012/08/26</code></sup></sub>
+</h3>
+
+<ul>
+<li>Added Javadocs to the project</li>
+<li>All the <code>log</code> methods now can handle <code>Throwable</code> objects, thanks <a href="https://github.com/JoelRodrigues" class="user-mention">@JoelRodrigues</a> for the suggestion</li>
+<li>Added <code>copyFile(fromFile, toFile)</code> to the <code>sdcard</code> category</li>
+<li>Added <code>copyFile(fromFileInputStream, toFileOutputStream)</code> to the <code>sdcard</code> category</li>
+<li>Added <code>getSDCardPath</code> to the <code>sdcard</code>category</li>
+<li>Added <code>web</code> category </li>
+<li>
+<code>hasInternetConnection()</code> moved from <code>misc</code> to <code>web</code> category</li>
+<li>Added <code>HTTPGetRequest()</code> to the <code>web</code>category</li>
+<li>Added <code>degreesToRadians</code>, <code>radiansTdoDegrees</code>, <code>acos</code>, <code>asin</code>, <code>atan</code>, <code>atan2</code>, <code>tan</code>, <code>max</code>, <code>min</code>, <code>abs</code>, <code>logarithm</code>, <code>exponencial</code> and <code>isEven</code> to the <code>math</code> category</li>
+<li>
+<code>getCurrentTimeInSeconds()</code> and <code>getCurrentTimeInMilliseconds()</code> moved to the <code>date</code> category</li>
+<li>Added<code>getDayAsString(int day, String format)</code> and <code>getDayAsDate(int day)</code> to the <code>date</code> category</li>
+</ul><h3>0.2 <sub><sup><code>2012/08/02</code></sup></sub>
 </h3>
 
 <ul>
@@ -55,7 +72,7 @@ Intended to help you getting your Android applications off the ground quickly, b
 <code>sleep</code> method now accepts milliseconds instead of seconds</li>
 <li>
 <code>log</code> now has a warning method</li>
-<li>Updated SDK version to 4.0.3</li>
+<li>Updated max SDK version to 4.0.3</li>
 <li>Added <code>math</code> category</li>
 <li>Get a random number between a given range</li>
 <li>Check if a number is odd</li>
@@ -96,9 +113,15 @@ Intended to help you getting your Android applications off the ground quickly, b
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">"error description"</span><span class="o">);</span>
 </pre></div>
 
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">"error description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
+</pre></div>
+
 <h3>Verbose Log</h3>
 
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">v</span><span class="o">(</span><span class="s">"verbose description"</span><span class="o">);</span>
+</pre></div>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">v</span><span class="o">(</span><span class="s">"verbose description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
 </pre></div>
 
 <h3>Information Log</h3>
@@ -106,9 +129,15 @@ Intended to help you getting your Android applications off the ground quickly, b
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="s">"information description"</span><span class="o">);</span>
 </pre></div>
 
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="s">"information description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
+</pre></div>
+
 <h3>Warning Log</h3>
 
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">w</span><span class="o">(</span><span class="s">"warning description"</span><span class="o">);</span>
+</pre></div>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">w</span><span class="o">(</span><span class="s">"warning description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
 </pre></div>
 
 <h3>Debug Log</h3>
@@ -116,26 +145,15 @@ Intended to help you getting your Android applications off the ground quickly, b
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">"debug description"</span><span class="o">);</span>
 </pre></div>
 
-<h3>Debug Log <code>throwable</code>
-</h3>
-
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">"debug description"</span><span class="o">,</span> <span class="n">Throwable</span> <span class="n">t</span><span class="o">);</span>
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">"debug description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
 </pre></div>
 
-<hr><h2>MISC <sub><sup><code>category</code></sup></sub>
+<hr><h2>DATE <sub><sup><code>category</code></sup></sub>
 </h2>
 
-<p>With this methods you don't need to set....</p>
+<p>Date Utils</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">__method__</span>
-</pre></div>
-
-<h3>Checks if the app has connectivity to the Internet <code>boolean</code>
-</h3>
-
-<p>True if has connection to the Internet and false if it doesn't.</p>
-
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">hasInternetConnection</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">);</span>
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
 <h3>Get the current time in milliseconds <code>long</code>
@@ -150,12 +168,42 @@ Intended to help you getting your Android applications off the ground quickly, b
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getCurrentTimeInSeconds</span><span class="o">();</span>
 </pre></div>
 
-<h3>Sleep <code>void</code>
+<h3>Gets a date with a desired format as a String <code>String</code>
 </h3>
 
-<p>Causes the thread which sent this message to sleep for the given interval of time (given in milliseconds). The precision is not guaranteed - the Thread may sleep more or less than requested.</p>
+<p>They "day" parameter can be provided as: </p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="n">durationInMilliseconds</span><span class="o">);</span>
+<ul>
+<li>
+<code>QuickUtils.date.YESTERDAY</code>, </li>
+<li>
+<code>QuickUtils.date.TODAY</code> or </li>
+<li><code>QuickUtils.date.TOMORROW</code></li>
+</ul><p>The format can be provided as e.g. "yyyy-MM-dd HH:mm:ss"</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getDayAsString</span><span class="o">(</span><span class="kt">int</span> <span class="n">day</span><span class="o">,</span> <span class="n">String</span> <span class="n">format</span><span class="o">);</span>
+</pre></div>
+
+<h3>Gets the desired day as a Date <code>Date</code>
+</h3>
+
+<p>They "day" parameter can be provided as:</p>
+
+<ul>
+<li>
+<code>QuickUtils.date.YESTERDAY</code>, </li>
+<li>
+<code>QuickUtils.date.TODAY</code> or </li>
+<li><code>QuickUtils.date.TOMORROW</code></li>
+</ul><div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getDayAsDate</span><span class="o">(</span><span class="kt">int</span> <span class="n">day</span><span class="o">);</span>
+</pre></div>
+
+<hr><h2>MISC <sub><sup><code>category</code></sup></sub>
+</h2>
+
+<p>Misc utils</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
 <h3>Toast method with short duration <code>void</code>
@@ -172,6 +220,14 @@ Intended to help you getting your Android applications off the ground quickly, b
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">toast</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="s">"This is a short toast"</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">);</span>
 </pre></div>
 
+<h3>Sleep <code>void</code>
+</h3>
+
+<p>Causes the thread which sent this message to sleep for the given interval of time (given in milliseconds). The precision is not guaranteed - the Thread may sleep more or less than requested.</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="n">durationInMilliseconds</span><span class="o">);</span>
+</pre></div>
+
 <hr><h2>MATH <sub><sup><code>category</code></sup></sub>
 </h2>
 
@@ -180,20 +236,154 @@ Intended to help you getting your Android applications off the ground quickly, b
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
-<h3>Returns a random number between MIN inclusive and MAX exclusive. <code>int</code>
+<h3>Returns a random number <code>int</code>
 </h3>
 
 <p>A random int between MIN inclusive and MAX exclusive.</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">getRandomNumber</span><span class="o">(</span><span class="kt">int</span> <span class="n">min</span><span class="o">,</span> <span class="kt">int</span> <span class="n">max</span><span class="o">);</span>
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">getRandomNumber</span><span class="o">(</span><span class="kt">int</span> <span class="n">min</span><span class="o">,</span> <span class="kt">int</span> <span class="n">max</span><span class="o">);</span>
 </pre></div>
 
-<h3>Check if a number is Odd. <code>boolean</code>
+<h3>Check if a number is Odd <code>boolean</code>
 </h3>
 
 <p>True if the num is odd and false if it's even</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">isOdd</span><span class="o">(</span><span class="kt">int</span> <span class="n">num</span><span class="o">);</span>
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">isOdd</span><span class="o">(</span><span class="kt">int</span> <span class="n">num</span><span class="o">);</span>
+</pre></div>
+
+<h3>Check if a number is Even <code>boolean</code>
+</h3>
+
+<p>True if the num is even and false if it's odd</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">isEven</span><span class="o">(</span><span class="kt">int</span> <span class="n">num</span><span class="o">);</span>
+</pre></div>
+
+<h3>Degrees to radians <code>float</code>
+</h3>
+
+<p>Returns the converted value</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">degreesToRadians</span><span class="o">(</span><span class="kt">float</span> <span class="n">degrees</span><span class="o">);</span>
+</pre></div>
+
+<h3>Radians to degrees <code>float</code>
+</h3>
+
+<p>Returns the converted value</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">radiansTdoDegrees</span><span class="o">(</span><span class="kt">float</span> <span class="n">radians</span><span class="o">);</span>
+</pre></div>
+
+<h3>Arc cosine <code>float</code>
+</h3>
+
+<p>Returns the closest double approximation of the arc cosine of the argument within the range [0..pi]. The returned result is within 1 ulp (unit in the last place) of the real result.</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">acos</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
+</pre></div>
+
+<h3>Arc sine <code>float</code>
+</h3>
+
+<p>Returns the closest double approximation of the arc sine of the argument within the range [-pi/2..pi/2]. The returned result is within 1 ulp (unit in the last place) of the real result.</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">asin</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
+</pre></div>
+
+<h3>Arc tangent <code>float</code>
+</h3>
+
+<p>Returns the closest double approximation of the arc tangent of the argument within the range [-pi/2..pi/2]. The returned result is within 1 ulp (unit in the last place) of the real result.</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">atan</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
+</pre></div>
+
+<h3>Arc tangent of y/x within the range [-pi..pi] <code>float</code>
+</h3>
+
+<p>Returns the closest double approximation of the arc tangent of y/x within the range [-pi..pi]. This is the angle of the polar representation of the rectangular coordinates (x,y). The returned result is within 2 ulps (units in the last place) of the real result.</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">atan2</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
+</pre></div>
+
+<h3>Tangent of an angle <code>float</code>
+</h3>
+
+<p>Returns the tangent</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">tan</span><span class="o">(</span><span class="kt">float</span> <span class="n">angle</span><span class="o">);</span>
+</pre></div>
+
+<h3>Absolute value <code>float</code>
+</h3>
+
+<p>Returns the absolute value</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="kt">float</span> <span class="n">v</span><span class="o">);</span>
+</pre></div>
+
+<h3>Number's logarithm <code>float</code>
+</h3>
+
+<p>Returns the closest double approximation of the natural logarithm of the argument. The returned result is within 1 ulp (unit in the last place) of the real result.</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">logarithm</span><span class="o">(</span><span class="kt">float</span> <span class="n">number</span><span class="o">);</span>
+</pre></div>
+
+<h3>Number's Exponencial <code>float</code>
+</h3>
+
+<p>Returns the closest double approximation of the natural logarithm of the argument. The returned result is within 1  ulp (unit in the last place) of the real result.</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">exponencial</span><span class="o">(</span><span class="kt">float</span> <span class="n">number</span><span class="o">);</span>
+</pre></div>
+
+<h3>Gets the higher number <code>float</code> <code>int</code>
+</h3>
+
+<p>the higher number between a and b</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="kt">float</span> <span class="n">a</span><span class="o">,</span> <span class="kt">float</span> <span class="n">b</span><span class="o">);</span>
+</pre></div>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">);</span>
+</pre></div>
+
+<h3>Gets the lower number <code>float</code> <code>int</code>
+</h3>
+
+<p>the lower number between a and b</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="kt">float</span> <span class="n">a</span><span class="o">,</span> <span class="kt">float</span> <span class="n">b</span><span class="o">);</span>
+</pre></div>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">);</span>
+</pre></div>
+
+<hr><h2>WEB <sub><sup><code>category</code></sup></sub>
+</h2>
+
+<p>Web Utils.</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">__method__</span>
+</pre></div>
+
+<h3>Checks if the app has connectivity to the Internet <code>boolean</code>
+</h3>
+
+<p>True if has connection to the Internet and false if it doesn't.</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">hasInternetConnection</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">);</span>
+</pre></div>
+
+<h3>Does a GET request to a given url <code>String</code>
+</h3>
+
+<p>Note: Please use this method on an AsyncTask in order not to freeze the application unnecessarely  (<a href="http://developer.android.com/guide/practices/responsiveness.html">http://developer.android.com/guide/practices/responsiveness.html</a>)</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">HTTPGetRequest</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">);</span>
 </pre></div>
 
 <hr><h2>SDCARD <sub><sup><code>category</code></sup></sub>
@@ -220,6 +410,31 @@ Intended to help you getting your Android applications off the ground quickly, b
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">isSDCardWritable</span><span class="o">();</span>
 </pre></div>
 
+<h3>Get the path to the SDCard <code>String</code>
+</h3>
+
+<p>Return the complete path to the SDCard</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">getSDCardPath</span><span class="o">();</span>
+</pre></div>
+
+<h3>Copy a file from a place to another <code>void</code>
+</h3>
+
+<p>Creates the specified <code>toFile</code> as a byte for byte copy of  the <code>fromFile</code>. If <code>toFile</code> already exists, then it will be replaced with a copy of <code>fromFile</code>. The name and path of<code>toFile</code> will be that of <code>toFile</code>.</p>
+
+<p>Note: <code>fromFile</code> and <code>toFile</code> will be closed by this function.</p>
+
+<p>As Files</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">copyFile</span><span class="o">(</span><span class="n">fromFile</span><span class="o">,</span> <span class="n">toFile</span><span class="o">);</span>
+</pre></div>
+
+<p>or with Input and Output Streams:</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">copyFile</span><span class="o">(</span><span class="n">fromFileInputStream</span><span class="o">,</span> <span class="n">toFileOutputStream</span><span class="o">);</span>
+</pre></div>
+
 <h2>Example</h2>
 
 <div class="highlight"><pre><span class="nd">@Override</span>
@@ -230,6 +445,11 @@ Intended to help you getting your Android applications off the ground quickly, b
         <span class="c1">// SET ENVIRONMENT</span>
         <span class="n">QuickUtils</span><span class="o">.</span><span class="na">setDebugMode</span><span class="o">(</span><span class="n">QuickUtils</span><span class="o">.</span><span class="na">DEVELOPER_MODE</span><span class="o">);</span> <span class="c1">// can be omited</span>
 
+        <span class="c1">// SET THE DEBUG TAG</span>
+        <span class="n">QuickUtils</span><span class="o">.</span><span class="na">setTAG</span><span class="o">(</span><span class="s">"SAMPLE_APP"</span><span class="o">);</span>
+
+        <span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">v</span><span class="o">(</span><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">logarithm</span><span class="o">(</span><span class="n">number</span><span class="o">)</span> <span class="o">+</span> <span class="s">""</span><span class="o">);</span>
+
         <span class="k">try</span> <span class="o">{</span>
             <span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">w</span><span class="o">(</span><span class="s">"This is dangerous code"</span><span class="o">);</span>
 
@@ -237,23 +457,32 @@ Intended to help you getting your Android applications off the ground quickly, b
             <span class="c1">// ...</span>
             <span class="c1">// ...</span>
 
-            <span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">toast</span><span class="o">(</span><span class="k">this</span><span class="o">,</span>
-                    <span class="s">"The result of your dangerous calculations is: "</span> <span class="o">+</span> <span class="n">number</span><span class="o">);</span>
+            <span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">toast</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="s">"The result of your dangerous calculations is: "</span> <span class="o">+</span> <span class="n">number</span><span class="o">);</span>
 
         <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">exception</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">"Exception thrown"</span><span class="o">,</span> <span class="n">exception</span><span class="o">);</span>
+            <span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">"Exception thrown"</span><span class="o">,</span> <span class="n">exception</span><span class="o">);</span>
         <span class="o">}</span>
 
         <span class="c1">// Check if you can write on your sdcard</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">isSDCardAvailable</span><span class="o">()</span>
-                <span class="o">&amp;&amp;</span> <span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">isSDCardWritable</span><span class="o">())</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">isSDCardAvailable</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">isSDCardWritable</span><span class="o">())</span> <span class="o">{</span>
 
             <span class="c1">// you can write safely on your sdcard</span>
-            <span class="c1">// ...</span>
-            <span class="c1">// ...</span>
+
+
+            <span class="n">File</span> <span class="n">path</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">getSDCardPath</span><span class="o">()</span> <span class="o">+</span> <span class="s">"/appName/"</span><span class="o">);</span>
+
+            <span class="n">File</span> <span class="n">from</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">path</span><span class="o">,</span> <span class="s">"from.txt"</span><span class="o">);</span>
+            <span class="n">File</span> <span class="n">to</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">path</span><span class="o">,</span> <span class="s">"to.txt"</span><span class="o">);</span>
+
+            <span class="k">try</span> <span class="o">{</span>
+                <span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">copyFile</span><span class="o">(</span><span class="n">from</span><span class="o">,</span> <span class="n">to</span><span class="o">);</span>
+                <span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="s">"Written to the sdcard"</span><span class="o">);</span>
+
+            <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">"IOException"</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
+            <span class="o">}</span>
         <span class="o">}</span>
 
-    <span class="o">}</span>
 </pre></div>
 
 <h2>Downloads</h2>
@@ -297,9 +526,9 @@ Intended to help you getting your Android applications off the ground quickly, b
 <div class="highlight"><pre><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.ACCESS_NETWORK_STATE"</span> <span class="nt">/&gt;</span>
 </pre></div>
 
-<h2>Import</h2>
+<p>If you intend to use the <code>HTTPGetRequest</code> method, if you haven't already, in your <code>&lt;manifest&gt;</code>:</p>
 
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">com.cesar.android</span><span class="o">;</span>
+<div class="highlight"><pre><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.INTERNET"</span> <span class="nt">/&gt;</span>
 </pre></div>
 
 <h2>Contributing</h2>
@@ -333,7 +562,17 @@ Intended to help you getting your Android applications off the ground quickly, b
       </footer>
     </div>
 
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-18248446-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
 
   </body>
 </html>
