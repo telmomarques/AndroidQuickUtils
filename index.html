@@ -33,9 +33,7 @@
       <section id="main_content" class="inner">
         <h2>QuickUtils</h2>
 
-
-
- <img src="https://dl.dropbox.com/u/86831/cesarferreira/nexus_header2.jpg">   
+<div><img src="https://dl.dropbox.com/u/86831/cesarferreira/nexus_header2.jpg"></div>  
 
 <p>This repository offers a set of random useful classes to deal with repetitive tasks in the Android Framework.
 Intended to help you getting your Android applications off the ground quickly, by offering ready-to-use components and utility classes that wrap a lot of the boilerplate that's involved when writing Android apps.</p>
@@ -228,6 +226,37 @@ Intended to help you getting your Android applications off the ground quickly, b
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="n">durationInMilliseconds</span><span class="o">);</span>
 </pre></div>
 
+<h3>Start google activity of speechRecognition</h3>
+
+<p>needed on onActivityResult(int requestCode, int resultCode, Intent data) to call getSpeechRecognitionResults() to get the results)</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">speechRecognition</span><span class="o">(</span><span class="kd">final</span> <span class="n">Activity</span> <span class="n">activity</span><span class="o">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="o">,</span> <span class="n">String</span> <span class="n">text</span><span class="o">);</span>
+</pre></div>
+
+<h3>Get all results from the Google Speech Recognition activity</h3>
+
+<p>To be called onActivityResult()
+Return an ArrayList with all results or null if was not possible to get any results</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getSpeechRecognitionResults</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">);</span>
+</pre></div>
+
+<h3>Get the first result that matches the Result List from Google Speech Recognition activity and the Dictionary given</h3>
+
+<p>To be called onActivityResult() 
+Return a String with the first result matched or null if was not possible to get any result</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getSpeechRecognitionResultFromDicionary</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">,</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">array</span><span class="o">);</span>
+</pre></div>
+
+<h3>Get first result from the Google Speech Recognition activity</h3>
+
+<p>To be called onActivityResult() 
+Return a string containing the first result of what was recognized</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getSpeechRecognitionFirstResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">);</span>
+</pre></div>
+
 <hr><h2>MATH <sub><sup><code>category</code></sup></sub>
 </h2>
 
@@ -370,10 +399,29 @@ Intended to help you getting your Android applications off the ground quickly, b
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
-<h3>Checks if the app has connectivity to the Internet <code>boolean</code>
-</h3>
+<h3>Set wireless connectivity On</h3>
 
-<p>True if has connection to the Internet and false if it doesn't.</p>
+<p>also this method will need the permissions "android.permission.CHANGE_WIFI_STATE" and "android.permission.ACCESS_WIFI_STATE"
+true if was set successfully and false if it wasn't</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">changeWirelessState</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">state</span><span class="o">);</span>
+</pre></div>
+
+<h3>Check if can connect to the server</h3>
+
+<p>also this method will need the permissions "android.permission.INTERNET"
+true if the connection returned a successful code</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">checkServerConnection</span><span class="o">(</span><span class="n">URL</span> <span class="n">u</span><span class="o">);</span>
+</pre></div>
+
+<h3>Check if can connect to the server</h3>
+
+<p>also this method will need the permissions "android.permission.INTERNET"
+true if the connection returned a successful code</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">checkServerConnection</span><span class="o">(</span><span class="n">String</span> <span class="n">serverURL</span><span class="o">);</span>
+</pre></div>
 
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">hasInternetConnection</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">);</span>
 </pre></div>
@@ -416,6 +464,13 @@ Intended to help you getting your Android applications off the ground quickly, b
 <p>Return the complete path to the SDCard</p>
 
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">getSDCardPath</span><span class="o">();</span>
+</pre></div>
+
+<h3>Check if file exists on SDCard or not</h3>
+
+<p>boolean - if file exist on SDCard or not</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">checkIfFileExists</span><span class="o">(</span><span class="n">String</span> <span class="n">filePath</span><span class="o">)</span>
 </pre></div>
 
 <h3>Copy a file from a place to another <code>void</code>
@@ -550,6 +605,11 @@ Intended to help you getting your Android applications off the ground quickly, b
 
 <ul>
 <li>César Ferreira (<a href="mailto:cesar.manuel.ferreira@gmail.com">cesar.manuel.ferreira@gmail.com</a>)</li>
+</ul><h2>Contributors</h2>
+
+<ul>
+<li>César Ferreira (<a href="mailto:cesar.manuel.ferreira@gmail.com">cesar.manuel.ferreira@gmail.com</a>)</li>
+<li>Luís Pereira (<a href="mailto:luispereira268@gmail.com">luispereira268@gmail.com</a>)</li>
 </ul>
       </section>
     </div>
