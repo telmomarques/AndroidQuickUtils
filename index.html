@@ -4,40 +4,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Quickutils by cesarferreira</title>
+
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-
+    <div class="wrapper">
       <header>
         <h1>Quickutils</h1>
         <p>My own set of utils for Android applications</p>
+
+        <p class="view"><a href="https://github.com/cesarferreira/AndroidQuickUtils">View the Project on GitHub <small>cesarferreira/AndroidQuickUtils</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/cesarferreira/AndroidQuickUtils/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/cesarferreira/AndroidQuickUtils/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/cesarferreira/AndroidQuickUtils">View On <strong>GitHub</strong></a></li>
+        </ul>
       </header>
-
-      <div id="banner">
-        <span id="logo"></span>
-
-        <a href="https://github.com/cesarferreira/AndroidQuickUtils" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/cesarferreira/AndroidQuickUtils/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/cesarferreira/AndroidQuickUtils/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
-
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
       <section>
         <h2>QuickUtils</h2>
 
@@ -72,7 +61,7 @@ It is intended to make application development easier and consistent through you
 <li>Inside Eclipse Right Click the jar and <code>Build Path -&gt; Add to Build Path</code>
 </li>
 </ol><p><strong>Note:</strong>
-if you use the <code>install via github</code>, all you need to do to get the latest version of <strong>QuickUtills</strong> is <code>git update</code> on the root of its directory. If you use the second method you need to download the newest version and re-add the <code>.jar</code>.</p>
+if you use the <code>install via github</code>, all you need to do to get the latest version of <strong>QuickUtills</strong> is <code>git pull</code> on the root of its directory. If you use the second method you need to download the newest version and re-add the <code>.jar</code>.</p>
 
 <h2>Downloads</h2>
 
@@ -479,7 +468,7 @@ true if the connection returned a successful code</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">copyFile</span><span class="o">(</span><span class="n">fromFileInputStream</span><span class="o">,</span> <span class="n">toFileOutputStream</span><span class="o">);</span>
 </pre></div>
 
-<h2>Setting up the environment (THIS HAS TO BE MOVED SOMEWHERE ELSE)</h2>
+<h2>Setting up the environment</h2>
 
 <p>Set the default TAG for logcat debug purposes</p>
 
@@ -543,11 +532,11 @@ true if the connection returned a successful code</p>
 </ul>
       </section>
       <footer>
-        <p>Project maintained by <a href="https://github.com/cesarferreira">cesarferreira</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+        <p>This project is maintained by <a href="https://github.com/cesarferreira">cesarferreira</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    <script src="javascripts/scale.fix.js"></script>
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
