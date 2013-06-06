@@ -1,34 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Quickutils by cesarferreira</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <title>Quickutils by cesarferreira</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
+    <header>
+      <div class="inner">
         <h1>Quickutils</h1>
-        <p>My own set of utils for Android applications</p>
+        <h2>My own set of utils for Android applications</h2>
+        <a href="https://github.com/cesarferreira/AndroidQuickUtils" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-        <p class="view"><a href="https://github.com/cesarferreira/AndroidQuickUtils">View the Project on GitHub <small>cesarferreira/AndroidQuickUtils</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/cesarferreira/AndroidQuickUtils/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/cesarferreira/AndroidQuickUtils/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/cesarferreira/AndroidQuickUtils">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h2>QuickUtils</h2>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2>
+<a name="quickutils" class="anchor" href="#quickutils"><span class="octicon octicon-link"></span></a>QuickUtils</h2>
 
 <p>QuickUtils is a development library for the Android platform.
 It is intended to make application development easier and consistent through your applications.</p>
@@ -39,7 +40,8 @@ It is intended to make application development easier and consistent through you
 
 <p>A sample application can be downloaded on the <a href="blabla">Android Market</a></p>
 
-<h2>Install</h2>
+<h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
 
 <p>Via <strong>github</strong>:</p>
 
@@ -63,11 +65,13 @@ It is intended to make application development easier and consistent through you
 </ol><p><strong>Note:</strong>
 if you use the <code>install via github</code>, all you need to do to get the latest version of <strong>QuickUtills</strong> is <code>git pull</code> on the root of its directory. If you use the second method you need to download the newest version and re-add the <code>.jar</code>.</p>
 
-<h2>Downloads</h2>
+<h2>
+<a name="downloads" class="anchor" href="#downloads"><span class="octicon octicon-link"></span></a>Downloads</h2>
 
 <p>All the versions can be found <a href="https://github.com/cesarferreira/AndroidQuickUtils/tags">here</a></p>
 
-<h2>How to Use</h2>
+<h2>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to Use</h2>
 
 <p><strong>Note:</strong> There is a sample application in the folder <strong>demos</strong> with examples for all the methods.</p>
 
@@ -76,7 +80,8 @@ if you use the <code>install via github</code>, all you need to do to get the la
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">__category__</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
-<hr><h2>LOG <sub><sup><code>category</code></sup></sub>
+<hr><h2>
+<a name="log-category" class="anchor" href="#log-category"><span class="octicon octicon-link"></span></a>LOG <sub><sup><code>category</code></sup></sub>
 </h2>
 
 <p>With this methods you don't need to set the TAG variable in every class of your project and you can disable the logs everywhere without deleting/commenting the log lines by setting the debug mode to PRODUCTION (explained in the previous section).</p>
@@ -84,7 +89,8 @@ if you use the <code>install via github</code>, all you need to do to get the la
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
-<h3>Error Log</h3>
+<h3>
+<a name="error-log" class="anchor" href="#error-log"><span class="octicon octicon-link"></span></a>Error Log</h3>
 
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">"error description"</span><span class="o">);</span>
 </pre></div>
@@ -92,7 +98,8 @@ if you use the <code>install via github</code>, all you need to do to get the la
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">"error description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
 </pre></div>
 
-<h3>Verbose Log</h3>
+<h3>
+<a name="verbose-log" class="anchor" href="#verbose-log"><span class="octicon octicon-link"></span></a>Verbose Log</h3>
 
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">v</span><span class="o">(</span><span class="s">"verbose description"</span><span class="o">);</span>
 </pre></div>
@@ -100,7 +107,8 @@ if you use the <code>install via github</code>, all you need to do to get the la
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">v</span><span class="o">(</span><span class="s">"verbose description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
 </pre></div>
 
-<h3>Information Log</h3>
+<h3>
+<a name="information-log" class="anchor" href="#information-log"><span class="octicon octicon-link"></span></a>Information Log</h3>
 
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="s">"information description"</span><span class="o">);</span>
 </pre></div>
@@ -108,7 +116,8 @@ if you use the <code>install via github</code>, all you need to do to get the la
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="s">"information description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
 </pre></div>
 
-<h3>Warning Log</h3>
+<h3>
+<a name="warning-log" class="anchor" href="#warning-log"><span class="octicon octicon-link"></span></a>Warning Log</h3>
 
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">w</span><span class="o">(</span><span class="s">"warning description"</span><span class="o">);</span>
 </pre></div>
@@ -116,7 +125,8 @@ if you use the <code>install via github</code>, all you need to do to get the la
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">w</span><span class="o">(</span><span class="s">"warning description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
 </pre></div>
 
-<h3>Debug Log</h3>
+<h3>
+<a name="debug-log" class="anchor" href="#debug-log"><span class="octicon octicon-link"></span></a>Debug Log</h3>
 
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">"debug description"</span><span class="o">);</span>
 </pre></div>
@@ -124,7 +134,8 @@ if you use the <code>install via github</code>, all you need to do to get the la
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">"debug description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
 </pre></div>
 
-<hr><h2>DATE <sub><sup><code>category</code></sup></sub>
+<hr><h2>
+<a name="date-category" class="anchor" href="#date-category"><span class="octicon octicon-link"></span></a>DATE <sub><sup><code>category</code></sup></sub>
 </h2>
 
 <p>Date Utils</p>
@@ -132,19 +143,22 @@ if you use the <code>install via github</code>, all you need to do to get the la
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
-<h3>Get the current time in milliseconds <code>long</code>
+<h3>
+<a name="get-the-current-time-in-milliseconds-long" class="anchor" href="#get-the-current-time-in-milliseconds-long"><span class="octicon octicon-link"></span></a>Get the current time in milliseconds <code>long</code>
 </h3>
 
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">getCurrentTimeInMiliseconds</span><span class="o">();</span>
 </pre></div>
 
-<h3>Get the current time in seconds <code>long</code>
+<h3>
+<a name="get-the-current-time-in-seconds-long" class="anchor" href="#get-the-current-time-in-seconds-long"><span class="octicon octicon-link"></span></a>Get the current time in seconds <code>long</code>
 </h3>
 
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">getCurrentTimeInSeconds</span><span class="o">();</span>
 </pre></div>
 
-<h3>Gets a date with a desired format as a String <code>String</code>
+<h3>
+<a name="gets-a-date-with-a-desired-format-as-a-string-string" class="anchor" href="#gets-a-date-with-a-desired-format-as-a-string-string"><span class="octicon octicon-link"></span></a>Gets a date with a desired format as a String <code>String</code>
 </h3>
 
 <p>They "day" parameter can be provided as: </p>
@@ -160,7 +174,8 @@ if you use the <code>install via github</code>, all you need to do to get the la
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">getDayAsString</span><span class="o">(</span><span class="kt">int</span> <span class="n">day</span><span class="o">,</span> <span class="n">String</span> <span class="n">format</span><span class="o">);</span>
 </pre></div>
 
-<h3>Gets the desired day as a Date <code>Date</code>
+<h3>
+<a name="gets-the-desired-day-as-a-date-date" class="anchor" href="#gets-the-desired-day-as-a-date-date"><span class="octicon octicon-link"></span></a>Gets the desired day as a Date <code>Date</code>
 </h3>
 
 <p>They "day" parameter can be provided as:</p>
@@ -174,7 +189,8 @@ if you use the <code>install via github</code>, all you need to do to get the la
 </ul><div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">getDayAsDate</span><span class="o">(</span><span class="kt">int</span> <span class="n">day</span><span class="o">);</span>
 </pre></div>
 
-<hr><h2>MISC <sub><sup><code>category</code></sup></sub>
+<hr><h2>
+<a name="misc-category" class="anchor" href="#misc-category"><span class="octicon octicon-link"></span></a>MISC <sub><sup><code>category</code></sup></sub>
 </h2>
 
 <p>Misc utils</p>
@@ -182,13 +198,15 @@ if you use the <code>install via github</code>, all you need to do to get the la
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
-<h3>Toast method with short duration <code>void</code>
+<h3>
+<a name="toast-method-with-short-duration-void" class="anchor" href="#toast-method-with-short-duration-void"><span class="octicon octicon-link"></span></a>Toast method with short duration <code>void</code>
 </h3>
 
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">toast</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="s">"This is a short toast"</span><span class="o">);</span>
 </pre></div>
 
-<h3>Toast with non specified duration <code>void</code>
+<h3>
+<a name="toast-with-non-specified-duration-void" class="anchor" href="#toast-with-non-specified-duration-void"><span class="octicon octicon-link"></span></a>Toast with non specified duration <code>void</code>
 </h3>
 
 <p>Either <code>Toast.LENGTH_SHORT</code> or <code>Toast.LENGTH_LONG</code></p>
@@ -196,7 +214,8 @@ if you use the <code>install via github</code>, all you need to do to get the la
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">toast</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="s">"This is a short toast"</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">);</span>
 </pre></div>
 
-<h3>Sleep <code>void</code>
+<h3>
+<a name="sleep-void" class="anchor" href="#sleep-void"><span class="octicon octicon-link"></span></a>Sleep <code>void</code>
 </h3>
 
 <p>Causes the thread which sent this message to sleep for the given interval of time (given in milliseconds). The precision is not guaranteed - the Thread may sleep more or less than requested.</p>
@@ -204,38 +223,8 @@ if you use the <code>install via github</code>, all you need to do to get the la
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="n">durationInMilliseconds</span><span class="o">);</span>
 </pre></div>
 
-<h3>Start google activity of speechRecognition</h3>
-
-<p>needed on onActivityResult(int requestCode, int resultCode, Intent data) to call getSpeechRecognitionResults() to get the results)</p>
-
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">speechRecognition</span><span class="o">(</span><span class="kd">final</span> <span class="n">Activity</span> <span class="n">activity</span><span class="o">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="o">,</span> <span class="n">String</span> <span class="n">text</span><span class="o">);</span>
-</pre></div>
-
-<h3>Get all results from the Google Speech Recognition activity</h3>
-
-<p>To be called onActivityResult()
-Return an ArrayList with all results or null if was not possible to get any results</p>
-
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getSpeechRecognitionResults</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">);</span>
-</pre></div>
-
-<h3>Get the first result that matches the Result List from Google Speech Recognition activity and the Dictionary given</h3>
-
-<p>To be called onActivityResult() 
-Return a String with the first result matched or null if was not possible to get any result</p>
-
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getSpeechRecognitionResultFromDicionary</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">,</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">array</span><span class="o">);</span>
-</pre></div>
-
-<h3>Get first result from the Google Speech Recognition activity</h3>
-
-<p>To be called onActivityResult() 
-Return a string containing the first result of what was recognized</p>
-
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getSpeechRecognitionFirstResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">);</span>
-</pre></div>
-
-<hr><h2>MATH <sub><sup><code>category</code></sup></sub>
+<hr><h2>
+<a name="math-category" class="anchor" href="#math-category"><span class="octicon octicon-link"></span></a>MATH <sub><sup><code>category</code></sup></sub>
 </h2>
 
 <p>Math Utils.</p>
@@ -243,7 +232,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
-<h3>Returns a random number <code>int</code>
+<h3>
+<a name="returns-a-random-number-int" class="anchor" href="#returns-a-random-number-int"><span class="octicon octicon-link"></span></a>Returns a random number <code>int</code>
 </h3>
 
 <p>A random int between MIN inclusive and MAX exclusive.</p>
@@ -251,7 +241,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">getRandomNumber</span><span class="o">(</span><span class="kt">int</span> <span class="n">min</span><span class="o">,</span> <span class="kt">int</span> <span class="n">max</span><span class="o">);</span>
 </pre></div>
 
-<h3>Check if a number is Odd <code>boolean</code>
+<h3>
+<a name="check-if-a-number-is-odd-boolean" class="anchor" href="#check-if-a-number-is-odd-boolean"><span class="octicon octicon-link"></span></a>Check if a number is Odd <code>boolean</code>
 </h3>
 
 <p>True if the num is odd and false if it's even</p>
@@ -259,7 +250,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">isOdd</span><span class="o">(</span><span class="kt">int</span> <span class="n">num</span><span class="o">);</span>
 </pre></div>
 
-<h3>Check if a number is Even <code>boolean</code>
+<h3>
+<a name="check-if-a-number-is-even-boolean" class="anchor" href="#check-if-a-number-is-even-boolean"><span class="octicon octicon-link"></span></a>Check if a number is Even <code>boolean</code>
 </h3>
 
 <p>True if the num is even and false if it's odd</p>
@@ -267,7 +259,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">isEven</span><span class="o">(</span><span class="kt">int</span> <span class="n">num</span><span class="o">);</span>
 </pre></div>
 
-<h3>Degrees to radians <code>float</code>
+<h3>
+<a name="degrees-to-radians-float" class="anchor" href="#degrees-to-radians-float"><span class="octicon octicon-link"></span></a>Degrees to radians <code>float</code>
 </h3>
 
 <p>Returns the converted value</p>
@@ -275,7 +268,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">degreesToRadians</span><span class="o">(</span><span class="kt">float</span> <span class="n">degrees</span><span class="o">);</span>
 </pre></div>
 
-<h3>Radians to degrees <code>float</code>
+<h3>
+<a name="radians-to-degrees-float" class="anchor" href="#radians-to-degrees-float"><span class="octicon octicon-link"></span></a>Radians to degrees <code>float</code>
 </h3>
 
 <p>Returns the converted value</p>
@@ -283,7 +277,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">radiansTdoDegrees</span><span class="o">(</span><span class="kt">float</span> <span class="n">radians</span><span class="o">);</span>
 </pre></div>
 
-<h3>Arc cosine <code>float</code>
+<h3>
+<a name="arc-cosine-float" class="anchor" href="#arc-cosine-float"><span class="octicon octicon-link"></span></a>Arc cosine <code>float</code>
 </h3>
 
 <p>Returns the closest double approximation of the arc cosine of the argument within the range [0..pi]. The returned result is within 1 ulp (unit in the last place) of the real result.</p>
@@ -291,7 +286,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">acos</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
 </pre></div>
 
-<h3>Arc sine <code>float</code>
+<h3>
+<a name="arc-sine-float" class="anchor" href="#arc-sine-float"><span class="octicon octicon-link"></span></a>Arc sine <code>float</code>
 </h3>
 
 <p>Returns the closest double approximation of the arc sine of the argument within the range [-pi/2..pi/2]. The returned result is within 1 ulp (unit in the last place) of the real result.</p>
@@ -299,7 +295,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">asin</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
 </pre></div>
 
-<h3>Arc tangent <code>float</code>
+<h3>
+<a name="arc-tangent-float" class="anchor" href="#arc-tangent-float"><span class="octicon octicon-link"></span></a>Arc tangent <code>float</code>
 </h3>
 
 <p>Returns the closest double approximation of the arc tangent of the argument within the range [-pi/2..pi/2]. The returned result is within 1 ulp (unit in the last place) of the real result.</p>
@@ -307,7 +304,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">atan</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
 </pre></div>
 
-<h3>Arc tangent of y/x within the range [-pi..pi] <code>float</code>
+<h3>
+<a name="arc-tangent-of-yx-within-the-range--pipi-float" class="anchor" href="#arc-tangent-of-yx-within-the-range--pipi-float"><span class="octicon octicon-link"></span></a>Arc tangent of y/x within the range [-pi..pi] <code>float</code>
 </h3>
 
 <p>Returns the closest double approximation of the arc tangent of y/x within the range [-pi..pi]. This is the angle of the polar representation of the rectangular coordinates (x,y). The returned result is within 2 ulps (units in the last place) of the real result.</p>
@@ -315,7 +313,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">atan2</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
 </pre></div>
 
-<h3>Tangent of an angle <code>float</code>
+<h3>
+<a name="tangent-of-an-angle-float" class="anchor" href="#tangent-of-an-angle-float"><span class="octicon octicon-link"></span></a>Tangent of an angle <code>float</code>
 </h3>
 
 <p>Returns the tangent</p>
@@ -323,7 +322,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">tan</span><span class="o">(</span><span class="kt">float</span> <span class="n">angle</span><span class="o">);</span>
 </pre></div>
 
-<h3>Absolute value <code>float</code>
+<h3>
+<a name="absolute-value-float" class="anchor" href="#absolute-value-float"><span class="octicon octicon-link"></span></a>Absolute value <code>float</code>
 </h3>
 
 <p>Returns the absolute value</p>
@@ -331,7 +331,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="kt">float</span> <span class="n">v</span><span class="o">);</span>
 </pre></div>
 
-<h3>Number's logarithm <code>float</code>
+<h3>
+<a name="numbers-logarithm-float" class="anchor" href="#numbers-logarithm-float"><span class="octicon octicon-link"></span></a>Number's logarithm <code>float</code>
 </h3>
 
 <p>Returns the closest double approximation of the natural logarithm of the argument. The returned result is within 1 ulp (unit in the last place) of the real result.</p>
@@ -339,7 +340,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">logarithm</span><span class="o">(</span><span class="kt">float</span> <span class="n">number</span><span class="o">);</span>
 </pre></div>
 
-<h3>Number's Exponencial <code>float</code>
+<h3>
+<a name="numbers-exponencial-float" class="anchor" href="#numbers-exponencial-float"><span class="octicon octicon-link"></span></a>Number's Exponencial <code>float</code>
 </h3>
 
 <p>Returns the closest double approximation of the natural logarithm of the argument. The returned result is within 1  ulp (unit in the last place) of the real result.</p>
@@ -347,7 +349,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">exponencial</span><span class="o">(</span><span class="kt">float</span> <span class="n">number</span><span class="o">);</span>
 </pre></div>
 
-<h3>Gets the higher number <code>float</code> <code>int</code>
+<h3>
+<a name="gets-the-higher-number-float-int" class="anchor" href="#gets-the-higher-number-float-int"><span class="octicon octicon-link"></span></a>Gets the higher number <code>float</code> <code>int</code>
 </h3>
 
 <p>the higher number between a and b</p>
@@ -358,7 +361,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">);</span>
 </pre></div>
 
-<h3>Gets the lower number <code>float</code> <code>int</code>
+<h3>
+<a name="gets-the-lower-number-float-int" class="anchor" href="#gets-the-lower-number-float-int"><span class="octicon octicon-link"></span></a>Gets the lower number <code>float</code> <code>int</code>
 </h3>
 
 <p>the lower number between a and b</p>
@@ -369,7 +373,52 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">);</span>
 </pre></div>
 
-<hr><h2>WEB <sub><sup><code>category</code></sup></sub>
+<hr><h2>
+<a name="voice-category" class="anchor" href="#voice-category"><span class="octicon octicon-link"></span></a>VOICE <sub><sup><code>category</code></sup></sub>
+</h2>
+
+<p>Voice utils</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">voice</span><span class="o">.</span><span class="na">__method__</span>
+</pre></div>
+
+<h3>
+<a name="start-activity-of-speechrecognition-void" class="anchor" href="#start-activity-of-speechrecognition-void"><span class="octicon octicon-link"></span></a>Start activity of speechRecognition (Void)</h3>
+
+<p>Start activity of Google Voice Recognition</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">speechRecognition</span><span class="o">(</span><span class="kd">final</span> <span class="n">Activity</span> <span class="n">activity</span><span class="o">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="o">,</span> <span class="n">String</span> <span class="n">text</span><span class="o">);</span>
+</pre></div>
+
+<h3>
+<a name="results-from-google-voice-recognition-arraylist" class="anchor" href="#results-from-google-voice-recognition-arraylist"><span class="octicon octicon-link"></span></a>results from Google Voice Recognition (ArrayList)</h3>
+
+<p>To be called onActivityResult()
+Return an ArrayList with all results or null if was not possible to get any results</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getSpeechRecognitionResults</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">);</span>
+</pre></div>
+
+<h3>
+<a name="first-result-from-google-speech-recognition-matching-the-dictionary-given-string" class="anchor" href="#first-result-from-google-speech-recognition-matching-the-dictionary-given-string"><span class="octicon octicon-link"></span></a>First result from Google Speech Recognition matching the Dictionary given (String)</h3>
+
+<p>To be called onActivityResult() 
+Return a String with the first result matched or null if was not possible to get any result</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getSpeechRecognitionResultFromDicionary</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">,</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">array</span><span class="o">);</span>
+</pre></div>
+
+<h3>
+<a name="first-result-from-google-speech-recognition-string" class="anchor" href="#first-result-from-google-speech-recognition-string"><span class="octicon octicon-link"></span></a>First result from Google Speech Recognition (String)</h3>
+
+<p>To be called onActivityResult() 
+Return a string containing the first result of what was recognized</p>
+
+<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getSpeechRecognitionFirstResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">);</span>
+</pre></div>
+
+<hr><h2>
+<a name="web-category" class="anchor" href="#web-category"><span class="octicon octicon-link"></span></a>WEB <sub><sup><code>category</code></sup></sub>
 </h2>
 
 <p>Web Utils.</p>
@@ -377,7 +426,8 @@ Return a string containing the first result of what was recognized</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
-<h3>Set wireless connectivity On</h3>
+<h3>
+<a name="set-wireless-connectivity-on" class="anchor" href="#set-wireless-connectivity-on"><span class="octicon octicon-link"></span></a>Set wireless connectivity On</h3>
 
 <p>also this method will need the permissions "android.permission.CHANGE_WIFI_STATE" and "android.permission.ACCESS_WIFI_STATE"
 true if was set successfully and false if it wasn't</p>
@@ -385,7 +435,8 @@ true if was set successfully and false if it wasn't</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">changeWirelessState</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">state</span><span class="o">);</span>
 </pre></div>
 
-<h3>Check if can connect to the server</h3>
+<h3>
+<a name="check-if-can-connect-to-the-server" class="anchor" href="#check-if-can-connect-to-the-server"><span class="octicon octicon-link"></span></a>Check if can connect to the server</h3>
 
 <p>also this method will need the permissions "android.permission.INTERNET"
 true if the connection returned a successful code</p>
@@ -393,7 +444,8 @@ true if the connection returned a successful code</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">checkServerConnection</span><span class="o">(</span><span class="n">URL</span> <span class="n">u</span><span class="o">);</span>
 </pre></div>
 
-<h3>Check if can connect to the server</h3>
+<h3>
+<a name="check-if-can-connect-to-the-server-1" class="anchor" href="#check-if-can-connect-to-the-server-1"><span class="octicon octicon-link"></span></a>Check if can connect to the server</h3>
 
 <p>also this method will need the permissions "android.permission.INTERNET"
 true if the connection returned a successful code</p>
@@ -404,7 +456,8 @@ true if the connection returned a successful code</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">hasInternetConnection</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">);</span>
 </pre></div>
 
-<h3>Does a GET request to a given url <code>String</code>
+<h3>
+<a name="does-a-get-request-to-a-given-url-string" class="anchor" href="#does-a-get-request-to-a-given-url-string"><span class="octicon octicon-link"></span></a>Does a GET request to a given url <code>String</code>
 </h3>
 
 <p>Note: Please use this method on an AsyncTask in order not to freeze the application unnecessarely  (<a href="http://developer.android.com/guide/practices/responsiveness.html">http://developer.android.com/guide/practices/responsiveness.html</a>)</p>
@@ -412,7 +465,8 @@ true if the connection returned a successful code</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">HTTPGetRequest</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">);</span>
 </pre></div>
 
-<hr><h2>SDCARD <sub><sup><code>category</code></sup></sub>
+<hr><h2>
+<a name="sdcard-category" class="anchor" href="#sdcard-category"><span class="octicon octicon-link"></span></a>SDCARD <sub><sup><code>category</code></sup></sub>
 </h2>
 
 <p>SDCard Utils.</p>
@@ -420,7 +474,8 @@ true if the connection returned a successful code</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
-<h3>Check if the SD Card is Available <code>boolean</code>
+<h3>
+<a name="check-if-the-sd-card-is-available-boolean" class="anchor" href="#check-if-the-sd-card-is-available-boolean"><span class="octicon octicon-link"></span></a>Check if the SD Card is Available <code>boolean</code>
 </h3>
 
 <p>True if the sd card is available and false if it is not</p>
@@ -428,7 +483,8 @@ true if the connection returned a successful code</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">isSDCardAvailable</span><span class="o">();</span>
 </pre></div>
 
-<h3>Check if the SD Card is Writable <code>boolean</code>
+<h3>
+<a name="check-if-the-sd-card-is-writable-boolean" class="anchor" href="#check-if-the-sd-card-is-writable-boolean"><span class="octicon octicon-link"></span></a>Check if the SD Card is Writable <code>boolean</code>
 </h3>
 
 <p>True if the sd card is writable and false if it is not</p>
@@ -436,7 +492,8 @@ true if the connection returned a successful code</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">isSDCardWritable</span><span class="o">();</span>
 </pre></div>
 
-<h3>Get the path to the SDCard <code>String</code>
+<h3>
+<a name="get-the-path-to-the-sdcard-string" class="anchor" href="#get-the-path-to-the-sdcard-string"><span class="octicon octicon-link"></span></a>Get the path to the SDCard <code>String</code>
 </h3>
 
 <p>Return the complete path to the SDCard</p>
@@ -444,14 +501,16 @@ true if the connection returned a successful code</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">getSDCardPath</span><span class="o">();</span>
 </pre></div>
 
-<h3>Check if file exists on SDCard or not</h3>
+<h3>
+<a name="check-if-file-exists-on-sdcard-or-not" class="anchor" href="#check-if-file-exists-on-sdcard-or-not"><span class="octicon octicon-link"></span></a>Check if file exists on SDCard or not</h3>
 
 <p>boolean - if file exist on SDCard or not</p>
 
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">checkIfFileExists</span><span class="o">(</span><span class="n">String</span> <span class="n">filePath</span><span class="o">)</span>
 </pre></div>
 
-<h3>Copy a file from a place to another <code>void</code>
+<h3>
+<a name="copy-a-file-from-a-place-to-another-void" class="anchor" href="#copy-a-file-from-a-place-to-another-void"><span class="octicon octicon-link"></span></a>Copy a file from a place to another <code>void</code>
 </h3>
 
 <p>Creates the specified <code>toFile</code> as a byte for byte copy of  the <code>fromFile</code>. If <code>toFile</code> already exists, then it will be replaced with a copy of <code>fromFile</code>. The name and path of<code>toFile</code> will be that of <code>toFile</code>.</p>
@@ -468,14 +527,16 @@ true if the connection returned a successful code</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">copyFile</span><span class="o">(</span><span class="n">fromFileInputStream</span><span class="o">,</span> <span class="n">toFileOutputStream</span><span class="o">);</span>
 </pre></div>
 
-<h2>Setting up the environment</h2>
+<h2>
+<a name="setting-up-the-environment" class="anchor" href="#setting-up-the-environment"><span class="octicon octicon-link"></span></a>Setting up the environment</h2>
 
 <p>Set the default TAG for logcat debug purposes</p>
 
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">setTAG</span><span class="o">(</span><span class="s">"DESIRED_TAG"</span><span class="o">);</span>
 </pre></div>
 
-<h3>Debug mode</h3>
+<h3>
+<a name="debug-mode" class="anchor" href="#debug-mode"><span class="octicon octicon-link"></span></a>Debug mode</h3>
 
 <p>To enable the log outputs (This is the default behavior of the library so you don't need to set this up).</p>
 
@@ -487,7 +548,8 @@ true if the connection returned a successful code</p>
 <div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">setDebugMode</span><span class="o">(</span><span class="n">QuickUtils</span><span class="o">.</span><span class="na">PRODUCTION_MODE</span><span class="o">);</span>
 </pre></div>
 
-<h2>AndroidManifest.xml</h2>
+<h2>
+<a name="androidmanifestxml" class="anchor" href="#androidmanifestxml"><span class="octicon octicon-link"></span></a>AndroidManifest.xml</h2>
 
 <p>If you intend to use the vibration util don't forget to add the vibration permission, if you haven't already, in your <code>&lt;manifest&gt;</code>:</p>
 
@@ -504,7 +566,8 @@ true if the connection returned a successful code</p>
 <div class="highlight"><pre><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.INTERNET"</span> <span class="nt">/&gt;</span>
 </pre></div>
 
-<h2>Contributing</h2>
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
 
 <p>Want to contribute? Great! </p>
 
@@ -515,29 +578,44 @@ true if the connection returned a successful code</p>
 <li>Push to the branch (<code>git push origin my_branch</code>)</li>
 <li>Create an <a href="https://github.com/cesarferreira/AndroidQuickUtils/issues">Issue</a> with a link to your branch</li>
 <li>Enjoy a refreshing Diet Coke and wait</li>
-</ol><h2>License</h2>
+</ol><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>Apache License, Version 2.0 (<a href="http://www.apache.org/licenses/LICENSE-2.0.html">http://www.apache.org/licenses/LICENSE-2.0.html</a>)</p>
 
-<h2>Authors</h2>
+<h2>
+<a name="authors" class="anchor" href="#authors"><span class="octicon octicon-link"></span></a>Authors</h2>
 
 <ul>
 <li>César Ferreira (<a href="mailto:cesar.manuel.ferreira@gmail.com">cesar.manuel.ferreira@gmail.com</a>)</li>
-</ul><h2>Contributors <sup>(<a href="https://github.com/cesarferreira/AndroidQuickUtils/graphs/contributors" title="link">graph</a>)</sup>
+</ul><h2>
+<a name="contributors-graph" class="anchor" href="#contributors-graph"><span class="octicon octicon-link"></span></a>Contributors <sup>(<a href="https://github.com/cesarferreira/AndroidQuickUtils/graphs/contributors" title="link">graph</a>)</sup>
 </h2>
 
 <ul>
 <li>César Ferreira (<a href="mailto:cesar.manuel.ferreira@gmail.com">cesar.manuel.ferreira@gmail.com</a>)</li>
 <li>Luís Pereira (<a href="mailto:luispereira268@gmail.com">luispereira268@gmail.com</a>)</li>
 </ul>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/cesarferreira">cesarferreira</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/cesarferreira/AndroidQuickUtils/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/cesarferreira/AndroidQuickUtils/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/cesarferreira/AndroidQuickUtils"></a> is maintained by <a href="https://github.com/cesarferreira">cesarferreira</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-              <script type="text/javascript">
+
+            <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
