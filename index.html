@@ -1,74 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <title>Quickutils by cesarferreira</title>
 
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <title>Quickutils by cesarferreira</title>
   </head>
-
   <body>
-    <header>
-      <div class="inner">
+    <div class="wrapper">
+      <header>
         <h1>Quickutils</h1>
-        <h2>My own set of utils for Android applications</h2>
-        <a href="https://github.com/cesarferreira/AndroidQuickUtils" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
+        <p>My own set of utils for Android applications</p>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h2>
-<a name="quickutils" class="anchor" href="#quickutils"><span class="octicon octicon-link"></span></a>QuickUtils</h2>
+        <p class="view"><a href="https://github.com/cesarferreira/AndroidQuickUtils">View the Project on GitHub <small>cesarferreira/AndroidQuickUtils</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/cesarferreira/AndroidQuickUtils/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/cesarferreira/AndroidQuickUtils/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/cesarferreira/AndroidQuickUtils">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="quickutils" class="anchor" href="#quickutils"><span class="octicon octicon-link"></span></a>QuickUtils</h1>
 
 <p>QuickUtils is a development library for the Android platform.
 It is intended to make application development easier and consistent through your applications.</p>
 
-<p><img src="https://dl.dropbox.com/u/86831/cesarferreira/nexus_header2.jpg" alt=""></p>
+<p><img src="http://i1.cdnds.net/13/44/618x464/tech-nexus-5-screenshot-6.png" alt=""></p>
 
+<h1>
+<a name="including-in-your-project" class="anchor" href="#including-in-your-project"><span class="octicon octicon-link"></span></a>Including in your project</h1>
 
+<p>If you use Maven:</p>
 
-<p>A sample application can be downloaded on the <a href="blabla">Android Market</a></p>
+<div class="highlight highlight-xml"><pre><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.cesarferreira.quickutils<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>library<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.0.0<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;type&gt;</span>aar<span class="nt">&lt;/type&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</pre></div>
 
-<h2>
-<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
+<p>or Gradle:</p>
 
-<p>Via <strong>github</strong>:</p>
-
-<ol>
-<li>Check a clone of this repo: <code>git@github.com:cesarferreira/AndroidQuickUtils.git</code>
-</li>
-<li>Import the <strong><code>QuickUtils</code></strong> project into Eclipse</li>
-<li>Open your project properties</li>
-<li>Go to Android</li>
-<li>Add <strong>QuickUtils</strong> as a <code>Library</code>
-</li>
-</ol><p>Or via <strong>download</strong>:</p>
-
-<ol>
-<li>Download the latest <code>quickutils.jar</code> from <a href="https://github.com/cesarferreira/AndroidQuickUtils/tags">here</a>
-</li>
-<li>Create a <code>lib/</code> folder in your project and add the <code>jar</code>
-</li>
-<li>Inside Eclipse Right Click the jar and <code>Build Path -&gt; Add to Build Path</code>
-</li>
-</ol><p><strong>Note:</strong>
-if you use the <code>install via github</code>, all you need to do to get the latest version of <strong>QuickUtills</strong> is <code>git pull</code> on the root of its directory. If you use the second method you need to download the newest version and re-add the <code>.jar</code>.</p>
-
-<h2>
-<a name="downloads" class="anchor" href="#downloads"><span class="octicon octicon-link"></span></a>Downloads</h2>
-
-<p>All the versions can be found <a href="https://github.com/cesarferreira/AndroidQuickUtils/tags">here</a></p>
+<div class="highlight highlight-groovy"><pre><span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">compile</span> <span class="s1">'com.cesarferreira.quickutils:library:1.0.0'</span>
+<span class="o">}</span>
+</pre></div>
 
 <h2>
 <a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to Use</h2>
@@ -77,7 +63,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Really simple usage, you just need to specify the category and the method you want to use.</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">__category__</span><span class="o">.</span><span class="na">__method__</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">__category__</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
 <hr><h2>
@@ -86,52 +72,52 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>With this methods you don't need to set the TAG variable in every class of your project and you can disable the logs everywhere without deleting/commenting the log lines by setting the debug mode to PRODUCTION (explained in the previous section).</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">__method__</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
 <h3>
 <a name="error-log" class="anchor" href="#error-log"><span class="octicon octicon-link"></span></a>Error Log</h3>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">"error description"</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">"error description"</span><span class="o">);</span>
 </pre></div>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">"error description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">"error description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
 </pre></div>
 
 <h3>
 <a name="verbose-log" class="anchor" href="#verbose-log"><span class="octicon octicon-link"></span></a>Verbose Log</h3>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">v</span><span class="o">(</span><span class="s">"verbose description"</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">v</span><span class="o">(</span><span class="s">"verbose description"</span><span class="o">);</span>
 </pre></div>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">v</span><span class="o">(</span><span class="s">"verbose description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">v</span><span class="o">(</span><span class="s">"verbose description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
 </pre></div>
 
 <h3>
 <a name="information-log" class="anchor" href="#information-log"><span class="octicon octicon-link"></span></a>Information Log</h3>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="s">"information description"</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="s">"information description"</span><span class="o">);</span>
 </pre></div>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="s">"information description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="s">"information description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
 </pre></div>
 
 <h3>
 <a name="warning-log" class="anchor" href="#warning-log"><span class="octicon octicon-link"></span></a>Warning Log</h3>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">w</span><span class="o">(</span><span class="s">"warning description"</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">w</span><span class="o">(</span><span class="s">"warning description"</span><span class="o">);</span>
 </pre></div>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">w</span><span class="o">(</span><span class="s">"warning description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">w</span><span class="o">(</span><span class="s">"warning description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
 </pre></div>
 
 <h3>
 <a name="debug-log" class="anchor" href="#debug-log"><span class="octicon octicon-link"></span></a>Debug Log</h3>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">"debug description"</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">"debug description"</span><span class="o">);</span>
 </pre></div>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">"debug description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">"debug description"</span><span class="o">,</span> <span class="n">throwable</span><span class="o">);</span>
 </pre></div>
 
 <hr><h2>
@@ -140,21 +126,21 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Date Utils</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">__method__</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
 <h3>
 <a name="get-the-current-time-in-milliseconds-long" class="anchor" href="#get-the-current-time-in-milliseconds-long"><span class="octicon octicon-link"></span></a>Get the current time in milliseconds <code>long</code>
 </h3>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">getCurrentTimeInMiliseconds</span><span class="o">();</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">getCurrentTimeInMiliseconds</span><span class="o">();</span>
 </pre></div>
 
 <h3>
 <a name="get-the-current-time-in-seconds-long" class="anchor" href="#get-the-current-time-in-seconds-long"><span class="octicon octicon-link"></span></a>Get the current time in seconds <code>long</code>
 </h3>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">getCurrentTimeInSeconds</span><span class="o">();</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">getCurrentTimeInSeconds</span><span class="o">();</span>
 </pre></div>
 
 <h3>
@@ -171,7 +157,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 <li><code>QuickUtils.date.TOMORROW</code></li>
 </ul><p>The format can be provided as e.g. "yyyy-MM-dd HH:mm:ss"</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">getDayAsString</span><span class="o">(</span><span class="kt">int</span> <span class="n">day</span><span class="o">,</span> <span class="n">String</span> <span class="n">format</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">getDayAsString</span><span class="o">(</span><span class="kt">int</span> <span class="n">day</span><span class="o">,</span> <span class="n">String</span> <span class="n">format</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -186,7 +172,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 <li>
 <code>QuickUtils.date.TODAY</code> or </li>
 <li><code>QuickUtils.date.TOMORROW</code></li>
-</ul><div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">getDayAsDate</span><span class="o">(</span><span class="kt">int</span> <span class="n">day</span><span class="o">);</span>
+</ul><div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">date</span><span class="o">.</span><span class="na">getDayAsDate</span><span class="o">(</span><span class="kt">int</span> <span class="n">day</span><span class="o">);</span>
 </pre></div>
 
 <hr><h2>
@@ -195,14 +181,14 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Misc utils</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">__method__</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
 <h3>
 <a name="toast-method-with-short-duration-void" class="anchor" href="#toast-method-with-short-duration-void"><span class="octicon octicon-link"></span></a>Toast method with short duration <code>void</code>
 </h3>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">toast</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="s">"This is a short toast"</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">toast</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="s">"This is a short toast"</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -211,7 +197,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Either <code>Toast.LENGTH_SHORT</code> or <code>Toast.LENGTH_LONG</code></p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">toast</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="s">"This is a short toast"</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">toast</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="s">"This is a short toast"</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -220,7 +206,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Causes the thread which sent this message to sleep for the given interval of time (given in milliseconds). The precision is not guaranteed - the Thread may sleep more or less than requested.</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="n">durationInMilliseconds</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="n">durationInMilliseconds</span><span class="o">);</span>
 </pre></div>
 
 <hr><h2>
@@ -229,7 +215,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Math Utils.</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">__method__</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
 <h3>
@@ -238,7 +224,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>A random int between MIN inclusive and MAX exclusive.</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">getRandomNumber</span><span class="o">(</span><span class="kt">int</span> <span class="n">min</span><span class="o">,</span> <span class="kt">int</span> <span class="n">max</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">getRandomNumber</span><span class="o">(</span><span class="kt">int</span> <span class="n">min</span><span class="o">,</span> <span class="kt">int</span> <span class="n">max</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -247,7 +233,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>True if the num is odd and false if it's even</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">isOdd</span><span class="o">(</span><span class="kt">int</span> <span class="n">num</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">isOdd</span><span class="o">(</span><span class="kt">int</span> <span class="n">num</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -256,7 +242,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>True if the num is even and false if it's odd</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">isEven</span><span class="o">(</span><span class="kt">int</span> <span class="n">num</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">isEven</span><span class="o">(</span><span class="kt">int</span> <span class="n">num</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -265,7 +251,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Returns the converted value</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">degreesToRadians</span><span class="o">(</span><span class="kt">float</span> <span class="n">degrees</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">degreesToRadians</span><span class="o">(</span><span class="kt">float</span> <span class="n">degrees</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -274,7 +260,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Returns the converted value</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">radiansTdoDegrees</span><span class="o">(</span><span class="kt">float</span> <span class="n">radians</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">radiansTdoDegrees</span><span class="o">(</span><span class="kt">float</span> <span class="n">radians</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -283,7 +269,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Returns the closest double approximation of the arc cosine of the argument within the range [0..pi]. The returned result is within 1 ulp (unit in the last place) of the real result.</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">acos</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">acos</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -292,7 +278,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Returns the closest double approximation of the arc sine of the argument within the range [-pi/2..pi/2]. The returned result is within 1 ulp (unit in the last place) of the real result.</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">asin</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">asin</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -301,7 +287,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Returns the closest double approximation of the arc tangent of the argument within the range [-pi/2..pi/2]. The returned result is within 1 ulp (unit in the last place) of the real result.</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">atan</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">atan</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -310,7 +296,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Returns the closest double approximation of the arc tangent of y/x within the range [-pi..pi]. This is the angle of the polar representation of the rectangular coordinates (x,y). The returned result is within 2 ulps (units in the last place) of the real result.</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">atan2</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">atan2</span><span class="o">(</span><span class="kt">float</span> <span class="n">value</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -319,7 +305,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Returns the tangent</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">tan</span><span class="o">(</span><span class="kt">float</span> <span class="n">angle</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">tan</span><span class="o">(</span><span class="kt">float</span> <span class="n">angle</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -328,7 +314,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Returns the absolute value</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="kt">float</span> <span class="n">v</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="kt">float</span> <span class="n">v</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -337,7 +323,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Returns the closest double approximation of the natural logarithm of the argument. The returned result is within 1 ulp (unit in the last place) of the real result.</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">logarithm</span><span class="o">(</span><span class="kt">float</span> <span class="n">number</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">logarithm</span><span class="o">(</span><span class="kt">float</span> <span class="n">number</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -346,7 +332,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Returns the closest double approximation of the natural logarithm of the argument. The returned result is within 1  ulp (unit in the last place) of the real result.</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">exponencial</span><span class="o">(</span><span class="kt">float</span> <span class="n">number</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">exponencial</span><span class="o">(</span><span class="kt">float</span> <span class="n">number</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -355,10 +341,10 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>the higher number between a and b</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="kt">float</span> <span class="n">a</span><span class="o">,</span> <span class="kt">float</span> <span class="n">b</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="kt">float</span> <span class="n">a</span><span class="o">,</span> <span class="kt">float</span> <span class="n">b</span><span class="o">);</span>
 </pre></div>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -367,10 +353,10 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>the lower number between a and b</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="kt">float</span> <span class="n">a</span><span class="o">,</span> <span class="kt">float</span> <span class="n">b</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="kt">float</span> <span class="n">a</span><span class="o">,</span> <span class="kt">float</span> <span class="n">b</span><span class="o">);</span>
 </pre></div>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">);</span>
 </pre></div>
 
 <hr><h2>
@@ -379,7 +365,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Voice utils</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">voice</span><span class="o">.</span><span class="na">__method__</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">voice</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
 <h3>
@@ -387,7 +373,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 
 <p>Start activity of Google Voice Recognition</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">speechRecognition</span><span class="o">(</span><span class="kd">final</span> <span class="n">Activity</span> <span class="n">activity</span><span class="o">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="o">,</span> <span class="n">String</span> <span class="n">text</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">speechRecognition</span><span class="o">(</span><span class="kd">final</span> <span class="n">Activity</span> <span class="n">activity</span><span class="o">,</span> <span class="kt">int</span> <span class="n">maxResults</span><span class="o">,</span> <span class="n">String</span> <span class="n">text</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -396,7 +382,7 @@ if you use the <code>install via github</code>, all you need to do to get the la
 <p>To be called onActivityResult()
 Return an ArrayList with all results or null if was not possible to get any results</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getSpeechRecognitionResults</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getSpeechRecognitionResults</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -405,7 +391,7 @@ Return an ArrayList with all results or null if was not possible to get any resu
 <p>To be called onActivityResult() 
 Return a String with the first result matched or null if was not possible to get any result</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getSpeechRecognitionResultFromDicionary</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">,</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">array</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getSpeechRecognitionResultFromDicionary</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">,</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">array</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -414,7 +400,7 @@ Return a String with the first result matched or null if was not possible to get
 <p>To be called onActivityResult() 
 Return a string containing the first result of what was recognized</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getSpeechRecognitionFirstResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">misc</span><span class="o">.</span><span class="na">getSpeechRecognitionFirstResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultCode</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">);</span>
 </pre></div>
 
 <hr><h2>
@@ -423,7 +409,7 @@ Return a string containing the first result of what was recognized</p>
 
 <p>Web Utils.</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">__method__</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
 <h3>
@@ -432,28 +418,21 @@ Return a string containing the first result of what was recognized</p>
 <p>also this method will need the permissions "android.permission.CHANGE_WIFI_STATE" and "android.permission.ACCESS_WIFI_STATE"
 true if was set successfully and false if it wasn't</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">changeWirelessState</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">state</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">changeWirelessState</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">state</span><span class="o">);</span>
 </pre></div>
 
 <h3>
 <a name="check-if-can-connect-to-the-server" class="anchor" href="#check-if-can-connect-to-the-server"><span class="octicon octicon-link"></span></a>Check if can connect to the server</h3>
 
-<p>also this method will need the permissions "android.permission.INTERNET"
-true if the connection returned a successful code</p>
+<p><code>True</code> if the connection returned a successful code</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">checkServerConnection</span><span class="o">(</span><span class="n">URL</span> <span class="n">u</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">checkServerConnection</span><span class="o">(</span><span class="n">String</span> <span class="n">serverURL</span><span class="o">);</span>
 </pre></div>
 
 <h3>
-<a name="check-if-can-connect-to-the-server-1" class="anchor" href="#check-if-can-connect-to-the-server-1"><span class="octicon octicon-link"></span></a>Check if can connect to the server</h3>
+<a name="checks-if-there-is-an-internet-connection" class="anchor" href="#checks-if-there-is-an-internet-connection"><span class="octicon octicon-link"></span></a>Checks if there is an internet connection</h3>
 
-<p>also this method will need the permissions "android.permission.INTERNET"
-true if the connection returned a successful code</p>
-
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">checkServerConnection</span><span class="o">(</span><span class="n">String</span> <span class="n">serverURL</span><span class="o">);</span>
-</pre></div>
-
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">hasInternetConnection</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">hasInternetConnection</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -462,7 +441,7 @@ true if the connection returned a successful code</p>
 
 <p>Note: Please use this method on an AsyncTask in order not to freeze the application unnecessarely  (<a href="http://developer.android.com/guide/practices/responsiveness.html">http://developer.android.com/guide/practices/responsiveness.html</a>)</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">HTTPGetRequest</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">web</span><span class="o">.</span><span class="na">HTTPGetRequest</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">);</span>
 </pre></div>
 
 <hr><h2>
@@ -471,7 +450,7 @@ true if the connection returned a successful code</p>
 
 <p>SDCard Utils.</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">__method__</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">__method__</span>
 </pre></div>
 
 <h3>
@@ -480,7 +459,7 @@ true if the connection returned a successful code</p>
 
 <p>True if the sd card is available and false if it is not</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">isSDCardAvailable</span><span class="o">();</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">isSDCardAvailable</span><span class="o">();</span>
 </pre></div>
 
 <h3>
@@ -489,7 +468,7 @@ true if the connection returned a successful code</p>
 
 <p>True if the sd card is writable and false if it is not</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">isSDCardWritable</span><span class="o">();</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">isSDCardWritable</span><span class="o">();</span>
 </pre></div>
 
 <h3>
@@ -498,7 +477,7 @@ true if the connection returned a successful code</p>
 
 <p>Return the complete path to the SDCard</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">getSDCardPath</span><span class="o">();</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">getSDCardPath</span><span class="o">();</span>
 </pre></div>
 
 <h3>
@@ -506,7 +485,7 @@ true if the connection returned a successful code</p>
 
 <p>boolean - if file exist on SDCard or not</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">checkIfFileExists</span><span class="o">(</span><span class="n">String</span> <span class="n">filePath</span><span class="o">)</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">checkIfFileExists</span><span class="o">(</span><span class="n">String</span> <span class="n">filePath</span><span class="o">)</span>
 </pre></div>
 
 <h3>
@@ -519,12 +498,12 @@ true if the connection returned a successful code</p>
 
 <p>As Files</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">copyFile</span><span class="o">(</span><span class="n">fromFile</span><span class="o">,</span> <span class="n">toFile</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">copyFile</span><span class="o">(</span><span class="n">fromFile</span><span class="o">,</span> <span class="n">toFile</span><span class="o">);</span>
 </pre></div>
 
 <p>or with Input and Output Streams:</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">copyFile</span><span class="o">(</span><span class="n">fromFileInputStream</span><span class="o">,</span> <span class="n">toFileOutputStream</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">sdcard</span><span class="o">.</span><span class="na">copyFile</span><span class="o">(</span><span class="n">fromFileInputStream</span><span class="o">,</span> <span class="n">toFileOutputStream</span><span class="o">);</span>
 </pre></div>
 
 <h2>
@@ -532,7 +511,7 @@ true if the connection returned a successful code</p>
 
 <p>Set the default TAG for logcat debug purposes</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">setTAG</span><span class="o">(</span><span class="s">"DESIRED_TAG"</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">setTAG</span><span class="o">(</span><span class="s">"DESIRED_TAG"</span><span class="o">);</span>
 </pre></div>
 
 <h3>
@@ -540,45 +519,20 @@ true if the connection returned a successful code</p>
 
 <p>To enable the log outputs (This is the default behavior of the library so you don't need to set this up).</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">setDebugMode</span><span class="o">(</span><span class="n">QuickUtils</span><span class="o">.</span><span class="na">DEVELOPER_MODE</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">setDebugMode</span><span class="o">(</span><span class="n">QuickUtils</span><span class="o">.</span><span class="na">DEVELOPER_MODE</span><span class="o">);</span>
 </pre></div>
 
 <p>When the application is ready to go and you want to disable the log outputs.</p>
 
-<div class="highlight"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">setDebugMode</span><span class="o">(</span><span class="n">QuickUtils</span><span class="o">.</span><span class="na">PRODUCTION_MODE</span><span class="o">);</span>
+<div class="highlight highlight-java"><pre><span class="n">QuickUtils</span><span class="o">.</span><span class="na">setDebugMode</span><span class="o">(</span><span class="n">QuickUtils</span><span class="o">.</span><span class="na">PRODUCTION_MODE</span><span class="o">);</span>
 </pre></div>
+
+<h1>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h1>
+
+<p>Contributions welcome via Github pull requests.</p>
 
 <h2>
-<a name="androidmanifestxml" class="anchor" href="#androidmanifestxml"><span class="octicon octicon-link"></span></a>AndroidManifest.xml</h2>
-
-<p>If you intend to use the vibration util don't forget to add the vibration permission, if you haven't already, in your <code>&lt;manifest&gt;</code>:</p>
-
-<div class="highlight"><pre><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.VIBRATE"</span> <span class="nt">/&gt;</span>   
-</pre></div>
-
-<p>If you intend to use the <code>hasConnectivity</code> method don't forget to add the network state access permission, if you haven't already, in your <code>&lt;manifest&gt;</code>:</p>
-
-<div class="highlight"><pre><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.ACCESS_NETWORK_STATE"</span> <span class="nt">/&gt;</span>
-</pre></div>
-
-<p>If you intend to use the <code>HTTPGetRequest</code> method, if you haven't already, in your <code>&lt;manifest&gt;</code>:</p>
-
-<div class="highlight"><pre><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.INTERNET"</span> <span class="nt">/&gt;</span>
-</pre></div>
-
-<h2>
-<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
-
-<p>Want to contribute? Great! </p>
-
-<ol>
-<li>Fork it.</li>
-<li>Create a branch (<code>git checkout -b my_branch</code>)</li>
-<li>Commit your changes (<code>git commit -am "Added changes"</code>)</li>
-<li>Push to the branch (<code>git push origin my_branch</code>)</li>
-<li>Create an <a href="https://github.com/cesarferreira/AndroidQuickUtils/issues">Issue</a> with a link to your branch</li>
-<li>Enjoy a refreshing Diet Coke and wait</li>
-</ol><h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>Apache License, Version 2.0 (<a href="http://www.apache.org/licenses/LICENSE-2.0.html">http://www.apache.org/licenses/LICENSE-2.0.html</a>)</p>
@@ -596,26 +550,14 @@ true if the connection returned a successful code</p>
 <li>César Ferreira (<a href="mailto:cesar.manuel.ferreira@gmail.com">cesar.manuel.ferreira@gmail.com</a>)</li>
 <li>Luís Pereira (<a href="mailto:luispereira268@gmail.com">luispereira268@gmail.com</a>)</li>
 </ul>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/cesarferreira/AndroidQuickUtils/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/cesarferreira/AndroidQuickUtils/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/cesarferreira/AndroidQuickUtils"></a> is maintained by <a href="https://github.com/cesarferreira">cesarferreira</a>.</p>
-
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/cesarferreira">cesarferreira</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-
-            <script type="text/javascript">
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
